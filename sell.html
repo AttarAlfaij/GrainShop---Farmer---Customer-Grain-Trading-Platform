@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Grains | GrainShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌾 GrainShop</div>
+    <nav>
+      <a href="sell.html" class="active">Sell</a>
+      <a href="profile.html">Profile</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Sell Your Grains</h1>
+  </section>
+
+  <section class="form-section">
+    <form id="sellForm">
+      <label>Name:</label>
+      <input type="text" id="farmerName" required>
+      <label>Phone:</label>
+      <input type="text" id="farmerPhone" required>
+      <label>Grain Type:</label>
+      <select id="grainType" required>
+        <option>Wheat</option>
+        <option>Jowar</option>
+        <option>Bajra</option>
+        <option>Other</option>
+      </select>
+      <label>Quantity (kg):</label>
+      <input type="number" id="grainQty" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="sellMsg" class="message"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 GrainShop | Solapur</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

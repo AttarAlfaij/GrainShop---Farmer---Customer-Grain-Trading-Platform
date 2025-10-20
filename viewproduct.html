@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products | GrainShop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌾 GrainShop</div>
+    <nav>
+      <a href="view-products.html" class="active">Products</a>
+      <a href="profile.html">Profile</a>
+      <a href="sell.html">Sell</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" id="logoutBtn">Logout</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Available Grains</h1>
+  </section>
+
+  <section class="products-grid" id="productsGrid">
+   
+  </section>
+
+  <footer>
+    <p>© 2025 GrainShop | Solapur</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+  
+    const user = JSON.parse(localStorage.getItem("grainshopUser"));
+    if(!user){
+      alert("Please login first!");
+      window.location.href = "index.html";
+    }
+
+    const products = [
+      { name: "Wheat", price: 45 },
+      { name: "Jowar", price: 40 },
+      { name: "Bajra", price: 38 },
+      { name: "Maize", price: 35 },
+      { name: "Soyabin", price: 42 }
+    ];
+
+    const grid = document.getElementById("productsGrid");
+    products.forEach(prod => {
+      const card = document.createElement("div");
+      card.className = "product-card";
+      card.innerHTML = `
+        <h3>${prod.name}</h3>
+        <p>₹${prod.price}/kg</p>
+        <button onclick="buyProduct('${prod.name}')">Buy</button>
+      `;
+      grid.appendChild(card);
+    });
+
+    // ---------- BUY PRODUCT ----------
+    function buyProduct(product){
+      if(user.role !== "Customer"){
+        alert("Only customers can buy products!");
+        return;
+      }
+      alert(`🛒 You selected to buy ${product}. (Feature coming soon)`);
+    }
+  </script>
+</body>
+</html>

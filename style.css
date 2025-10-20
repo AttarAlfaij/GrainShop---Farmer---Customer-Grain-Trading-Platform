@@ -1,0 +1,15 @@
+body { font-family: Arial, sans-serif; background: #faf6ef; margin:0; }
+.navbar { display:flex; justify-content:space-between; background:#5a8f2b; padding:10px 30px; color:white; }
+.navbar a { color:white; margin-left:15px; text-decoration:none; }
+.navbar a.active { text-decoration:underline; }
+.hero { text-align:center; padding:50px 20px; background:#e0e7c0; }
+.login-section, .form-section, .profile-section { max-width:400px; margin:40px auto; text-align:center; background:white; padding:20px; border-radius:8px; box-shadow:0 0 10px #aaa; }
+input, select, button { width:100%; padding:10px; margin:10px 0; border-radius:5px; border:1px solid #bbb; }
+button { background:#5a8f2b; color:white; border:none; cursor:pointer; }
+button:hover { background:#4c7a22; }
+.message { font-weight:bold; margin-top:10px; }
+.products-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:20px; padding:20px; }
+.product-card { background:white; padding:20px; border-radius:8px; width:150px; text-align:center; box-shadow:0 0 10px #ccc; }
+.hidden { display:none; }
+.profile-pic { width:120px; border-radius:50%; margin-bottom:10px; }
+footer { text-align:center; padding:15px; background:#5a8f2b; color:white; margin-top:30px; }
